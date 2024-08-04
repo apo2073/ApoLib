@@ -10,19 +10,15 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.inventory.meta.SkullMeta
 
-class ItemBuilder(private var material: Material,
-                  private var amount: Int=1
+class ItemBuilder(
+    material: Material,
+    private var amount: Int=1
 ) {
-    private lateinit var item:ItemStack
-    private lateinit var meta:ItemMeta
-
-    fun ItemBuilder() {
-        item= ItemStack(material, amount)
-        meta=item.itemMeta
-    }
+    private var item:ItemStack= ItemStack(material,amount)
+    private var meta:ItemMeta=item.itemMeta
 
     fun setDisplayName(displayName: String):ItemBuilder {
-        meta.displayName(txt(displayName))
+        meta.displayName(txt(displayName.replace("&","§")))
         return this
     }
 
