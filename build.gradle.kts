@@ -44,6 +44,12 @@ dependencies {
 }
 
 val targetJavaVersion = 21
+
+java.toolchain {
+    languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+
 kotlin {
     jvmToolchain(targetJavaVersion)
 }
