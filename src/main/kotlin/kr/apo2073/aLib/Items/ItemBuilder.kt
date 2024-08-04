@@ -1,0 +1,85 @@
+package kr.apo2073.aLib.Items
+
+import kr.apo2073.aLib.Etc.txt
+import org.bukkit.Bukkit
+import org.bukkit.Material
+import org.bukkit.enchantments.Enchantment
+import org.bukkit.inventory.ItemFlag
+import org.bukkit.inventory.ItemRarity
+import org.bukkit.inventory.ItemStack
+import org.bukkit.inventory.meta.ItemMeta
+import org.bukkit.inventory.meta.SkullMeta
+
+class ItemBuilder(private var material: Material,
+                  private var amount: Int=1
+) {
+    private lateinit var item:ItemStack
+    private lateinit var meta:ItemMeta
+
+    fun ItemBuilder() {
+        item= ItemStack(material, amount)
+        meta=item.itemMeta
+    }
+
+    fun setDisplayName(displayName: String):ItemBuilder {
+        meta.displayName(txt(displayName))
+        return this
+    }
+
+    fun setLore(lore:List<String>):ItemBuilder {
+        meta.lore=lore
+        return this
+    }
+
+    fun setAmount(amount:Int):ItemBuilder {
+        item.amount=amount
+        return this
+    }
+
+    fun setCustomModelData(customModelData:Int):ItemBuilder {
+        meta.setCustomModelData(customModelData)
+        return this
+    }
+
+    fun setMaxStackSize(stack:Int):ItemBuilder {
+        meta.setMaxStackSize(stack)
+        return this
+    }
+
+    fun setRarity(rarity: ItemRarity):ItemBuilder {
+        meta.setRarity(rarity)
+        return this
+    }
+
+    fun addEnchantment(enchantment: Enchantment, level:Int, boolean: Boolean):ItemBuilder {
+        meta.addEnchant(enchantment,level,boolean)
+        return this
+    }
+
+    fun addItemFlag(flag: ItemFlag):ItemBuilder {
+        meta.addItemFlags(flag)
+        return this
+    }
+
+    fun setUnbreakable(unBreakable:Boolean):ItemBuilder {
+        meta.isUnbreakable=unBreakable
+        return this
+    }
+
+    fun setOwner(owner: String):ItemBuilder {
+        if (!item.isSkull()) return this
+        val skull:SkullMeta=meta as SkullMeta
+        skull.setOwningPlayer(Bukkit.getPlayer(owner))
+        return this
+    }
+
+    fun setMaterial(material: Material):ItemBuilder {
+        item.type=material
+        return this
+    }
+
+    fun build():ItemStack {
+        item.itemMeta=meta
+        return item
+    }
+}

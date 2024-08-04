@@ -1,0 +1,5 @@
+name: aLib
+version: 1.0.0
+main: kr.apo2073.aLib.ALib
+api-version: '1.21'
+authors: [ 아포칼립스 ]
