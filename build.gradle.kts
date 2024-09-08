@@ -1,11 +1,11 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "2.0.10"
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("maven-publish")
 }
 
 group = "com.github.apo2073"
-version = "1.0.0"
+version = "1.0.2"
 
 afterEvaluate {
     publishing {
@@ -36,17 +36,18 @@ repositories {
     maven("https://jitpack.io") {
         name= "jitpack"
     }
+    maven { url = uri("https://repo.gradle.org/gradle/repo") }
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.20-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }
 
-val targetJavaVersion = 21
+val targetJavaVersion = 17
 
 java.toolchain {
-    languageVersion.set(JavaLanguageVersion.of(21))
+    languageVersion.set(JavaLanguageVersion.of(targetJavaVersion))
 }
 
 

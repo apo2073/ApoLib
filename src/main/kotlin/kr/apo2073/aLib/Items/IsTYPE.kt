@@ -93,23 +93,27 @@ fun ItemStack.isStuff(): Boolean {
     if (material == Material.GOLDEN_SWORD) return true
     if (material == Material.DIAMOND_SWORD) return true
     if (material == Material.NETHERITE_SWORD) return true
+
     if (material == Material.WOODEN_AXE) return true
     if (material == Material.STONE_AXE) return true
     if (material == Material.IRON_AXE) return true
     if (material == Material.GOLDEN_AXE) return true
     if (material == Material.DIAMOND_AXE) return true
     if (material == Material.NETHERITE_AXE) return true
+
     if (material == Material.WOODEN_PICKAXE) return true
     if (material == Material.STONE_PICKAXE) return true
     if (material == Material.IRON_PICKAXE) return true
     if (material == Material.GOLDEN_PICKAXE) return true
     if (material == Material.DIAMOND_PICKAXE) return true
     if (material == Material.NETHERITE_PICKAXE) return true
+
     if (material == Material.WOODEN_SHOVEL) return true
     if (material == Material.STONE_SHOVEL) return true
     if (material == Material.IRON_SHOVEL) return true
     if (material == Material.GOLDEN_SHOVEL) return true
     if (material == Material.DIAMOND_SHOVEL) return true
+
     if (material == Material.NETHERITE_SHOVEL) return true
     if (material == Material.WOODEN_HOE) return true
     if (material == Material.STONE_HOE) return true
@@ -117,12 +121,13 @@ fun ItemStack.isStuff(): Boolean {
     if (material == Material.GOLDEN_HOE) return true
     if (material == Material.DIAMOND_HOE) return true
     if (material == Material.NETHERITE_HOE) return true
+
     if (material == Material.FISHING_ROD) return true
     if (material == Material.BOW) return true
     if (material == Material.CROSSBOW) return true
     if (material == Material.TRIDENT) return true
     if (material == Material.FLINT_AND_STEEL) return true
     if (material == Material.SHEARS) return true
-    if (material== Material.MACE) return true
+    //if (material== Material.MACE) return true
     return false
 }

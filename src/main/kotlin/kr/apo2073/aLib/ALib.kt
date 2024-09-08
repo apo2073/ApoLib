@@ -14,6 +14,7 @@ class ALib : JavaPlugin() {
             Component.text("Made By.아포칼립스").color(TextColor.color(0xB9AAFF)).decorate(
                 TextDecoration.BOLD).content())
 
+
     }
 
     companion object {

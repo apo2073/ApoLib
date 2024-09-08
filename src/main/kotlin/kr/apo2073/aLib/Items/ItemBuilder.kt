@@ -1,18 +1,18 @@
 package kr.apo2073.aLib.Items
 
 import kr.apo2073.aLib.Etc.txt
+import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemFlag
-import org.bukkit.inventory.ItemRarity
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.inventory.meta.SkullMeta
 
 class ItemBuilder(
     material: Material,
-    private var amount: Int=1
+    amount: Int=1
 ) {
     private var item:ItemStack= ItemStack(material,amount)
     private var meta:ItemMeta=item.itemMeta
@@ -22,8 +22,18 @@ class ItemBuilder(
         return this
     }
 
+    fun setItemName(itemName: Component): ItemBuilder {
+        meta.displayName(itemName)
+        return this
+    }
+
     fun setLore(lore:List<String>):ItemBuilder {
         meta.lore=lore
+        return this
+    }
+
+    fun setDescription(lore:List<Component>):ItemBuilder {
+        meta.lore(lore)
         return this
     }
 
@@ -37,6 +47,7 @@ class ItemBuilder(
         return this
     }
 
+    /*
     fun setMaxStackSize(stack:Int):ItemBuilder {
         meta.setMaxStackSize(stack)
         return this
@@ -46,6 +57,8 @@ class ItemBuilder(
         meta.setRarity(rarity)
         return this
     }
+
+     */
 
     fun addEnchantment(enchantment: Enchantment, level:Int, boolean: Boolean):ItemBuilder {
         meta.addEnchant(enchantment,level,boolean)

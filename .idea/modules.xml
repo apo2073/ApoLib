@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/aLib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/aLib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.github.apo2073.aLib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.github.apo2073.aLib.main.iml" />
     </modules>
   </component>
 </project>
