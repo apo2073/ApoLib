@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.apo2073"
-version = "1.0.2"
+version = "1.0.1"
 
 afterEvaluate {
     publishing {
@@ -13,11 +13,11 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 from(components["java"])
                 groupId = "com.github.apo2073"
-                artifactId = "aLib"
-                version = "aLib"
+                artifactId = "ApoLib"
+                version = "ApoLib"
 
                 pom {
-                    name.set("aLib")
+                    name.set("ApoLib")
                     description.set("Library for minecraft plugin")
                 }
             }

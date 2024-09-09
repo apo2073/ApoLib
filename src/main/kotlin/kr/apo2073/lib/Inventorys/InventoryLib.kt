@@ -1,4 +1,4 @@
-package kr.apo2073.aLib.Inventorys
+package kr.apo2073.lib.Inventorys
 
 import org.bukkit.event.inventory.InventoryType.SlotType
 import org.bukkit.inventory.Inventory

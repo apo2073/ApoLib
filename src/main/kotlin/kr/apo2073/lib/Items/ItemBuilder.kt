@@ -1,6 +1,6 @@
-package kr.apo2073.aLib.Items
+package kr.apo2073.lib.Items
 
-import kr.apo2073.aLib.Etc.txt
+import kr.apo2073.lib.Etc.txt
 import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.Material

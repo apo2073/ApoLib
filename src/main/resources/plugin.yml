@@ -1,7 +1,7 @@
-name: aLib
-version: 1.0.2
-main: kr.apo2073.aLib.ALib
+name: ApoLib
+version: 1.0.1
+main: kr.apo2073.lib.ALib
 api-version: '1.20'
 authors: [ 아포칼립스 ]
 libraries:
-  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.10

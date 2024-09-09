@@ -1,8 +1,11 @@
-package kr.apo2073.aLib.Players
+package kr.apo2073.lib.Players
 
 import org.bukkit.entity.Player
 import org.bukkit.inventory.Inventory
 
+fun Player.isInventoryFull(): Boolean {
+    return this.inventoryIsFull()
+}
 fun Player.inventoryIsFull(): Boolean {
     val inv: Inventory = this.inventory
     for (slot in inv.contents) {
@@ -12,4 +15,3 @@ fun Player.inventoryIsFull(): Boolean {
     }
     return true
 }
-

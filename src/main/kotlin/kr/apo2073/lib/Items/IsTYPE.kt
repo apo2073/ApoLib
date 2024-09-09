@@ -1,4 +1,4 @@
-package kr.apo2073.aLib.Items
+package kr.apo2073.lib.Items
 
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack

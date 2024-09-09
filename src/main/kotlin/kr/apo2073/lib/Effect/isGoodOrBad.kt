@@ -1,5 +1,9 @@
-package kr.apo2073.aLib.Effect
+package kr.apo2073.lib.Effect
 
+import org.bukkit.event.EventHandler
+import org.bukkit.event.Listener
+import org.bukkit.event.entity.EntityPotionEffectEvent
+import org.bukkit.event.entity.PotionSplashEvent
 import org.bukkit.potion.PotionEffectType
 
 fun PotionEffectType.getHarmful(): ArrayList<PotionEffectType> {

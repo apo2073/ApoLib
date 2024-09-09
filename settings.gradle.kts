@@ -1,1 +1,1 @@
-rootProject.name = "aLib"
+rootProject.name = "ApoLib"
