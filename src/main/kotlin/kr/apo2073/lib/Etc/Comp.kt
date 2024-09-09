@@ -30,17 +30,9 @@ fun warning(msg: String) {
     Bukkit.getLogger().warning(msg)
 }
 
-class MsgPerfix() {
-    fun Default():String {
-        return "§l[§a*§f]§r"
-    }
-    fun Error():String {
-        return "§l[§c*§f]§r"
-    }
-    fun Suggestion():String {
-        return "§l[§d*§f]§r"
-    }
-    fun Warning():String {
-        return "§l[§6*§f]§r"
-    }
+enum class msgPerfix(val perfix:String) {
+    DEFAULT("§l[§a*§f]§r"),
+    ERROR("§l[§c*§f]§r"),
+    SUGGESTION("§l[§d*§f]§r"),
+    WARNING("§l[§6*§f]§r")
 }
