@@ -1,5 +1,6 @@
 package kr.apo2073.lib.Etc
 
+import jdk.jshell.SourceCodeAnalysis.Suggestion
 import kr.apo2073.lib.ALib
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.TextColor
@@ -27,4 +28,19 @@ fun log(msg: String) {
 
 fun warning(msg: String) {
     Bukkit.getLogger().warning(msg)
+}
+
+class MsgPerfix() {
+    fun Default():String {
+        return "§l[§a*§f]§r"
+    }
+    fun Error():String {
+        return "§l[§c*§f]§r"
+    }
+    fun Suggestion():String {
+        return "§l[§d*§f]§r"
+    }
+    fun Warning():String {
+        return "§l[§6*§f]§r"
+    }
 }
