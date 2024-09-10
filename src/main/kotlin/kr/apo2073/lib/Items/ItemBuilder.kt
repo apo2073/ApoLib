@@ -1,6 +1,6 @@
 package kr.apo2073.lib.Items
 
-import kr.apo2073.lib.Etc.txt
+import kr.apo2073.lib.Plugins.txt
 import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.Material
@@ -10,10 +10,16 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.inventory.meta.SkullMeta
 
-class ItemBuilder(
-    material: Material,
-    amount: Int=1
-) {
+class ItemBuilder {
+    private lateinit var material:Material
+    private var amount: Int = 1
+    constructor(material: Material, amount: Int=1) {
+        this.material=material
+        this.amount=amount
+    }
+    constructor(itemStack: ItemStack) {
+        this.item=itemStack
+    }
     private var item:ItemStack= ItemStack(material,amount)
     private var meta:ItemMeta=item.itemMeta
 
@@ -91,4 +97,12 @@ class ItemBuilder(
         item.itemMeta=meta
         return item
     }
+    fun apply(): ItemStack {
+        item.itemMeta=meta
+        return item
+    }
+}
+
+fun ItemStack.asItemBuilder():ItemBuilder {
+    return ItemBuilder(this)
 }

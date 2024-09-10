@@ -1,6 +1,5 @@
 package kr.apo2073.lib
 
-import kr.apo2073.lib.Etc.log
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.text.format.TextDecoration
@@ -19,12 +18,12 @@ class ALib : JavaPlugin() {
     }
 
     companion object {
-        lateinit var Instance:ALib
+        var Instance:ALib?=null
             private set
     }
 
     fun getInstance():ALib {
-        return Instance
+        return Instance!!
     }
 
     override fun onDisable() {

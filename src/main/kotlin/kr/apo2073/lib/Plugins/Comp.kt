@@ -1,7 +1,5 @@
-package kr.apo2073.lib.Etc
+package kr.apo2073.lib.Plugins
 
-import jdk.jshell.SourceCodeAnalysis.Suggestion
-import kr.apo2073.lib.ALib
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.text.format.TextDecoration

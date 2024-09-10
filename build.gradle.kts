@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.apo2073"
-version = "1.0.1"
+version = "1.0.2"
 
 afterEvaluate {
     publishing {
@@ -14,11 +14,11 @@ afterEvaluate {
                 from(components["java"])
                 groupId = "com.github.apo2073"
                 artifactId = "ApoLib"
-                version = "ApoLib"
+                version = "1.0.2"
 
                 pom {
                     name.set("ApoLib")
-                    description.set("Library for minecraft plugin")
+                    description.set("Library for Minecraft plugin")
                 }
             }
         }
@@ -34,7 +34,7 @@ repositories {
         name = "sonatype"
     }
     maven("https://jitpack.io") {
-        name= "jitpack"
+        name = "jitpack"
     }
     maven { url = uri("https://repo.gradle.org/gradle/repo") }
 }
@@ -49,7 +49,6 @@ val targetJavaVersion = 17
 java.toolchain {
     languageVersion.set(JavaLanguageVersion.of(targetJavaVersion))
 }
-
 
 kotlin {
     jvmToolchain(targetJavaVersion)
