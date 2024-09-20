@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.apo2073"
-version = "1.0.2"
+version = "1.0.3"
 
 afterEvaluate {
     publishing {
@@ -14,7 +14,7 @@ afterEvaluate {
                 from(components["java"])
                 groupId = "com.github.apo2073"
                 artifactId = "ApoLib"
-                version = "1.0.2"
+                version = "1.0.3"
 
                 pom {
                     name.set("ApoLib")
