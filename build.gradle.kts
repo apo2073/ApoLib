@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.apo2073"
-version = "1.0.3"
+version = "1.0.3.1"
 
 afterEvaluate {
     publishing {
@@ -14,7 +14,7 @@ afterEvaluate {
                 from(components["java"])
                 groupId = "com.github.apo2073"
                 artifactId = "ApoLib"
-                version = "1.0.3"
+                version = "1.0.3.1"
 
                 pom {
                     name.set("ApoLib")
@@ -40,7 +40,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }
 

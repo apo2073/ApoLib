@@ -18,6 +18,7 @@ class ItemBuilder {
         this.amount=amount
     }
     constructor(itemStack: ItemStack) {
+        this.material=itemStack.type
         this.item=itemStack
     }
     private var item:ItemStack= ItemStack(material,amount)
