@@ -7,8 +7,9 @@ import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 
 class Register(private var plugin: JavaPlugin) {
-    fun resistEventListener(listener: Listener) {
+    fun resistEventListener(listener: Listener): Register {
         plugin.server.pluginManager.registerEvents(listener, plugin)
+        return this
     }
     fun resistCommandExecutor(command:String, commandExecutor: CommandExecutor):Register {
         plugin.getCommand(command)?.setExecutor(commandExecutor)
