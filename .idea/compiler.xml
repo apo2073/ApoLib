@@ -5,6 +5,7 @@
       <module name="aLib" target="17" />
       <module name="aLib.test" target="17" />
       <module name="ApoLib.aLib.main" target="17" />
+      <module name="kr.apo2073.ApoLib.main" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
